@@ -15,8 +15,8 @@ def regulaFalsi(a,b):
     c = 0
     stage = 1
     while abs(f(c)) > epsilon: #We will check if the value is equal to 0
-        c = b - (f(b) * (b - a)) / (f(b) - f(a)) #Calculate new approximated root
-        print(f'Iteration {stage} : a = {a} , b = {b} ,c = {c}')
+        c = (a * f(b) - b * f(a)) / (f(b) - f(a)) #Calculate new approximated root
+        print(f'Iteration {stage} : a = {a} , b = {b} ,c = {c},f(c) = {f(c)}')
         if f(a) * f(c) < 0:
             b = c
         elif f(b) * f(c) < 0:
